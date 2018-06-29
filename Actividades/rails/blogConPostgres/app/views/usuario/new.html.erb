@@ -1,0 +1,15 @@
+<h1>Usuario#nuevo</h1>
+<h2>Crear Nuevo Usuario</h2>
+<form method="post" action="<%=usuario_save_path%>">
+    <div>
+        <div>Número Identidad: <input type="text" name="usuario[identity]"></div>
+        <div>Nombre:  <input type="text" name="usuario[name]"></div>
+        <div>Correo:  <input type="text" name="usuario[email]"></div>
+        <div>Telefono: <input type="text" name="usuario[phone]"></div>
+        <div>Fecha Nacimiento: <input type="text" name="usuario[brithday]"></div>
+    </div>
+    <div>
+        <button type="submit">Guardar</button>
+    </div>
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+</form>
