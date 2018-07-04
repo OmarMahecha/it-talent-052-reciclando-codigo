@@ -1,0 +1,2 @@
+Libro.find(4)
+Libro.where(nombre: 'Satanas')

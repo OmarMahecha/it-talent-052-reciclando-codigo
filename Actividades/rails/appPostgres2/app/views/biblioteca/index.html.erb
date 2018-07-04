@@ -1,0 +1,9 @@
+<h1>MI BIBLIOTECA</h1>
+
+
+<% for libro in @libros %>
+<div>
+    <span><%=libro[:nombre]%></span><span>-<%=libro[:genero]%></span> 
+    <span>-Autor: <%=libro.autor[:nombre]%></span>  
+</div>
+<%end%>

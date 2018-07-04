@@ -1,0 +1,15 @@
+<h1>Libros#libro</h1>
+
+<form method="post" action="<%=biblioteca_guardar_path%>">
+    <div>
+        <div>ISBN: <input type="text" name="libro[ISBN]"></div>
+        <div>Nombre:  <input type="text" name="libro[nombre]"></div>
+        <div>autorID:  <input type="text" name="libro[autor_id]"></div>
+        <div>Genero: <input type="text" name="libro[genero]"></div>
+        <div>Descripción: <input type="text" name="libro[descripcion]"></div>
+    </div>
+    <div>
+        <button type="submit">Guardar</button>
+    </div>
+    <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+</form>
