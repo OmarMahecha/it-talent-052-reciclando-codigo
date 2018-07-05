@@ -1,5 +1,40 @@
-<h1>Libros#libro</h1>
-<p>Find me in app/views/libros/libro.html.erb</p>
+<!DOCTYPE html>
+<html>
+  <head>
+  	 <meta charset="utf-8">
+     <title>Biblioteca</title>
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  </head>
+  <body>
+  <table>
+    <body id="body">
+    </body>
+  </table>
 
 
-
+   <button onclick="getLibros()">Consultar Libros</button>
+    
+   <script>
+      function getLibros(){
+          var libros = [];
+        $.ajax({
+            url: 'http://localhost:3000/biblioteca/get_libros',
+            method:'get'
+        }).done(function(response){
+            libros = response.libros;
+            response.libros;
+            body = document.getElementById("body")
+            
+            libros.forEach(function(libro){
+                tr = document.createElement('tr');
+                td = document.createElement('td');
+                td.append(libro.titulo);
+                tr.appendChild(td);
+                body.appendChild(tr);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
